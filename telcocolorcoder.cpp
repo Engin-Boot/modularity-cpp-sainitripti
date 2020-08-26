@@ -29,8 +29,9 @@ namespace TelCoColorCoder
         
         std::string colorCodingStr = "\nPair Number \tColor\n\n";
 
+        int totalPairs = numberOfMajorColors * numberOfMinorColors;
         
-        for (int pairNumber = 1; pairNumber <= 25; pairNumber++) {
+        for (int pairNumber = 1; pairNumber <= totalPairs; pairNumber++) {
             ColorPair colorPair = GetColorFromPairNumber(pairNumber);
             colorCodingStr += std::to_string(pairNumber) + "\t\t" + colorPair.ToString() + "\n\n";
         }
